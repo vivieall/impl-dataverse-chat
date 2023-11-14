@@ -1,0 +1,302 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #670b45;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #670b45;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+dt, dd {
+  text-align: center;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+#stats {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.scientist-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(18 12 12 / 81%);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px;
+  height: 480px;
+  width: calc(20% - 24px);
+}
+
+.scientist-card img {
+  max-width: 100%;
+  margin-bottom: 4px;
+}
+
+.scientist-card dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scientist-card dt,
+.scientist-card dd {
+  text-align: center;
+  margin: 2px 0;
+}
+
+.scientist-card dt {
+  font-weight: bold;
+}
+
+
+.scientist-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.container-cards {
+  display: contents;
+}
+
+@media screen and (max-width: 991px) {
+  #controls {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #controls select:nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .scientist-card {
+    width: calc(60% - 24px);
+    padding-bottom: 2rem;
+    height: calc(20% - 20px);
+  }
+
+  .header-title, h1 {
+    margin-left: 0px !important;
+    font-size: 1.25rem;
+}
+
+  h2 {
+    font-size: 1rem;
+  }
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.header-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+#apiKeyButton{
+  margin-right: 10px;
+}
+
+.header-title {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12rem;
+}
+
+
+.api-key-container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+
+  #apiKeyInput {
+    margin-right: 1rem;
+    height: 2rem;
+    width: 24rem;
+    border-radius: 8px;
+  }
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(18 12 12 / 81%);
+  list-style-type: none;
+  height: 540px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 1rem;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+#chatInput {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#sendButton {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  height: 38px;
+}
+
+.chat-messages > div {
+  background-color: #e5e5ea;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message-user {
+  background-color: #3498db !important;
+  color: white;
+  text-align: right !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+  display: flex !important;
+  float: right
+}
+
+.input-button-chat {
+  display: flex;
+}
+
+.label-user {
+  font-size: 12px;
+  color: #670b45;
+  font-weight: bold;
+}
+
+.character-details {
+  display: flex;
+  justify-content: center;
+}
+
+#home {
+  cursor: pointer;
+}
+
+#home:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.person-left {
+  flex-basis: 35%;
+}
+
+.chat-container {
+  flex-basis: 75%;
+}
+
+.personImg {
+  height: 200px;
+  width: 200px;
+}
